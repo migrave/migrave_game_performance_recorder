@@ -1,0 +1,12 @@
+<launch>
+  <arg name="game_performance_topic" default="/mgirave/game_performance"/>
+  <arg name="is_record_topic" default="/migrave_data_recording/is_record"/>
+  <arg name="output_directory" default="/home/qtrobot/Documents"/>
+
+  <node name="migrave_game_performance_recorder" pkg="migrave_game_performance_recorder" type="migrave_game_performance_recorder" output="screen" respawn="true">
+    <param name="game_performance_topic" value="$(arg game_performance_topic)" />
+    <param name="is_record_topic" value="$(arg is_record_topic)" />
+    <param name="output_directory" value="$(arg output_directory)" />
+  </node>
+  
+</launch>

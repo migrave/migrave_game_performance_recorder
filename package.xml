@@ -19,7 +19,7 @@
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
   <!-- <url type="website">http://wiki.ros.org/migrave_game_performance_recorder</url> -->
-  <url type="website">https://github.com/migrave/game_performance_recorder</url>
+  <url type="website">https://github.com/migrave/migrave_game_performance_recorder</url>
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->

@@ -16,7 +16,6 @@ class GamePerformanceCapture:
         out_directory,
     ):
 
-        rospy.init_node("migrave_game_performance_recorder", anonymous=True)
         self._game_performance_recorder = GamePerformanceRecorder(
             out_directory=out_directory,
         )
@@ -87,6 +86,7 @@ class GamePerformanceCapture:
 
 if __name__ == "__main__":
     # default parameters
+    rospy.init_node("migrave_game_performance_recorder", anonymous=True)
     game_performance_topic = "/migrave/game_performance"
     is_record_topic = "/migrave_data_recording/is_record"
     output_directory = "/home/qtrobot/Documents/migrave"

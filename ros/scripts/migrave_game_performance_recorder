@@ -90,9 +90,14 @@ if __name__ == "__main__":
     game_performance_topic = "/migrave/game_performance"
     is_record_topic = "/migrave_data_recording/is_record"
     output_directory = "/home/qtrobot/Documents/migrave"
+
     # update parameter if provided by ros parameter server
+    if rospy.has_param('~game_performance_topic'):
+        game_performance_topic = rospy.get_param('~game_performance_topic')
     if rospy.has_param('~is_record_topic'):
         is_record_topic = rospy.get_param('~is_record_topic')
+    if rospy.has_param('~output_directory'):
+        output_directory = rospy.get_param('~output_directory')
 
     GamePerformanceCapture(
         game_performance_topic=game_performance_topic,
